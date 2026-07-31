@@ -146,8 +146,8 @@ if (user_input) and (leader_agent):
           code = response['messages'] [-1].content [-1] ['text']
           st.html(code, width="stretch", unsafe_allow_javascript=True)
       
-         except Exception as error:
-            st.error(err)
+        except Exception as err:
+          st.error(err)
 
 # TAB 3 Code
   with tab3:
@@ -157,17 +157,16 @@ if (user_input) and (leader_agent):
           code = run_agent(leader_agent,user_input)
           st.html(code, width="stretch", unsafe_allow_javascript=True)
 
-      # File Save
-      with open("ppt.html",'w') as f:
-        f.write(code)
-      st.download_button(LABEL="DOWNLOAD PPT",
-                         data=code,
-                         file_name='ppt.html',
-                         mime='text/html')
-                         
-      
-    except Exception as error:
-      st.error(err)
+          # File Save
+        
+          with open("ppt.html",'w') as f:
+           f.write(code)
+          st.download_button(LABEL="DOWNLOAD PPT",
+              data=code,
+              file_name='ppt.html',
+                mime='text/html')
+        except Exception as err:
+         st.error(err)
 
 else:
   st.error("SOMETHING WENT WRONG!!")
