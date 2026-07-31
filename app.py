@@ -167,22 +167,5 @@ if (user_input) and (leader_agent):
                 mime='text/html')
         except Exception as err:
          st.error(err)
-
-else:
-  st.error("SOMETHING WENT WRONG!!")
-
-
-      
-      
-
-
-
-          
-    
-          
-
-else:
-  st.error("SOMETING WENT WRONG!!")
-
-
-
+    else:
+         st.error("SOMETHING WENT WRONG!!")
