@@ -113,10 +113,13 @@ def run_agent(leader_agent, query):
 
 #=================================STEP 7 AGENT CALL============================================
 # Leader_agent creation
-leader_agent = create_agent(
+if all (ALL_API):
+  leader_agent = create_agent(
     model = model,
     tools= [search_latest_info,generate_image]
 )
+else:
+  st.info("Pass- All Aip-Keys and rerun")
 
 #================================STEP 8 NAVIBAR STREMLIT=======================================
 tab1,tab2,tab3 = st.tabs(["Generate Image",
