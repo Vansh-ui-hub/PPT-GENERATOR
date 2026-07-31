@@ -141,7 +141,7 @@ if (user_input) and (leader_agent):
 
   # TAB 2 Code
   with tab2:
-    if st.button("Generate Image", key="Fetch-News"):
+    if st.button("Generate News", key="Fetch-News"):
       with st.spinner("Running Agent"):
         try:
           prompt = "Give Multiple news in HTML card Format for topic" + user_input
