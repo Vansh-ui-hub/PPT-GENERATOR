@@ -30,7 +30,7 @@ if not all(ALL_API):
 elif all(ALL_API):
   st.sidebar.error("API-KEYS LOADED SUCCESSFULLY")
   # MODEL LOAD
-  model=CHATGOOGLEGENERATIVEAI(
+  model=ChatGoogleGenerativeAI(
     google_api_key = GOOGLE_API_KEY,
     model = st.sidebar.selectbox("Gemini-Model-Name",
                                    options = ["gemini-2.5-flash","gemini-2.5-flash-lite",
