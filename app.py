@@ -146,7 +146,7 @@ if (user_input) and (leader_agent):
           code = response['messages'] [-1].content [-1] ['text']
           st.html(code, width="stretch", unsafe_allow_javascript=True)
       
-          except Exception as error:
+         except Exception as error:
             st.error(err)
 
 # TAB 3 Code
